@@ -52,10 +52,7 @@ btnInicio.addEventListener('click', () => {
   // Evento para el enlace del carrito
   const carritoLink = document.getElementById('carrito-link');
   carritoLink.addEventListener('click', () => {
-    // Puedes redirigir a la página del carrito aquí
-    // Y pasar los datos del carrito a través de localStorage o parámetros de URL
-    // Por ejemplo:
-    // localStorage.setItem('carrito', JSON.stringify(carrito));
+  //falta codigo
   });
 
   // Ejemplo de uso
