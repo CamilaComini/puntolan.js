@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+</head>
+<body>
+  <h1>Carrito de Compras</h1>
+
+  <ul id="listaCarrito">
+    <!-- Aquí se mostrarán los productos del carrito -->
+  </ul>
+
+  <p>Total: <span id="totalCarrito">$0.00</span></p>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const listaCarrito = document.getElementById('listaCarrito');
+      const totalCarrito = document.getElementById('totalCarrito');
+
+      // Recuperar datos del carrito desde localStorage
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+      // Mostrar productos en el carrito
+      let total = 0;
+      carrito.forEach(producto => {
+        const li = document.createElement('li');
+        li.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
+        listaCarrito.appendChild(li);
+        total += producto.precio;
+      });
+
+      totalCarrito.textContent = `$${total.toFixed(2)}`;
+    });
+  </script>
+</body>
+</html>
