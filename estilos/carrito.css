@@ -1,0 +1,147 @@
+/* Reset de estilos básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* Fondo oscuro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de la imagen de fondo */
+#myimagen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; 
+}
+
+/* Estilo del header */
+header {
+  background-color: rgba(0, 0, 0, 0.767);
+  padding: 10px 20px;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo del carrito */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#carrito-link {
+  display: flex;
+  align-items: center;
+  color: #f70000;
+  text-decoration: none;
+  position: relative;
+}
+
+#carrito-link img {
+  max-width: 30px;
+  height: auto;
+}
+
+#contador-carrito {
+  background-color: #c91212;
+  color: #fff;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Estilo del contenido del carrito */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la lista de productos del carrito */
+#listaCarrito {
+  list-style: none;
+  padding: 0;
+}
+
+#listaCarrito li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del botón de eliminar */
+#listaCarrito li button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#listaCarrito li button:hover {
+  background-color: #e60000;
+}
+
+/* Estilo del total del carrito */
+#totalCarrito {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: #cccccc;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  #listaCarrito li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #listaCarrito li button {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

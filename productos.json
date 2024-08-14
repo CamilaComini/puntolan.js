@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "Auricular Inalambrico Xiaomi Redmi Buds 3",
+    "precio": 20000,
+    "imagen":  "fotos/auriculares bt buds lite.png",
+    "stock": 4,
+    "descripcion": "Auriculares inalámbricos de alta calidad."
+  },
+  {
+    "id": 2,
+    "nombre": "Auricular Inalambrico E7s",
+    "precio": 50,
+    "imagen": "fotos/auriculares bt e7s (1).png",
+    "stock": 30,
+    "descripcion": "Auriculares inalámbricos de alta calidad."
+  },
+  {
+    "id": 3,
+    "nombre": "Teclado",
+    "precio": 100,  
+    "imagen": "jpg",
+    "stock": 20,
+    "descripcion": "Teclado mecánico con retroiluminación."
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor",
+    "precio": 300,
+    "imagen": "jpg",
+    "stock": 15,
+    "descripcion": "Monitor de alta resolución para gaming."
+  }
+]

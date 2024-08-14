@@ -4,35 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="/estilos/carrito.css">
 </head>
 <body>
-  <h1>Carrito de Compras</h1>
+  <img id="myimagen" src="/fondo/neon-light-background-rvf1nlrwfke4jd9p.jpg" alt="Imagen de Fondo">
+  <header>
+    <h1>Tu Carrito de Compras</h1>
+    <a href="/index.html">Volver a la Tienda</a>
+  </header>
+  
+  <main>
+    <ul id="listaCarrito"></ul>
+    <p>Total: <span id="totalCarrito">$0.00</span></p>
+  </main>
 
-  <ul id="listaCarrito">
-    <!-- Aquí se mostrarán los productos del carrito -->
-  </ul>
-
-  <p>Total: <span id="totalCarrito">$0.00</span></p>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const listaCarrito = document.getElementById('listaCarrito');
-      const totalCarrito = document.getElementById('totalCarrito');
-
-      // Recuperar datos del carrito desde localStorage
-      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-      // Mostrar productos en el carrito
-      let total = 0;
-      carrito.forEach(producto => {
-        const li = document.createElement('li');
-        li.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
-        listaCarrito.appendChild(li);
-        total += producto.precio;
-      });
-
-      totalCarrito.textContent = `$${total.toFixed(2)}`;
-    });
-  </script>
+  <script src="/paginas/listacarrito.js"></script>
 </body>
 </html>

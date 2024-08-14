@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página con Video de Fondo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tu Página Principal</title>
+  <link rel="stylesheet" href="/estilos/style.css">
 </head>
 <body>
-  <video id="background-video" autoplay loop muted>
-    <source src="/fondomovimiento/telepoorte_fnl.mp4" type="video/mp4">
-    Tu navegador no soporta el elemento de video.
-  </video>
+  <img id="myimagen" src="/fondo/Tu centro integral de videojuegos.png" alt="Imagen de Fondo">
 
   <header>
     <div class="header-content">
@@ -20,15 +17,38 @@
       </div>
       <nav>
         <button id="btnInicio">Inicio</button>
-        <button id="btnProductos">Productos</button>
-        <button id="btnContacto">Contacto</button>
+        <button id="btnProductos">Productos</button>  
       </nav>
-      <a href="/listacarrito.html" id="carrito-link">
-        <img src="/logo/pngtree-fast-shopping-cart-icon-design-template-vector-png-image_5537563-removebg-preview.png" alt="Carrito de Compras">
-        <span id="contador-carrito">0</span>
-      </a>
+      <div class="header-right">
+        <a href="/listacarrito.html" id="carrito-link">
+          <img src="logo/vector-shopping-cart-icon.ico" alt="Carrito">
+          <span id="contador-carrito">0</span>
+        </a>
+      </div>
     </div>
-</header>
-  <script src="puntolan.js"></script>
+ </header>
+
+  <main>
+      <section class="video-preview-container">
+      <video id="background-video" autoplay loop> 
+        <source src="/video/ellos.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+      </video>
+    </section>
+
+        <!-- Contenedor para productos destacados -->
+        <section id="productos-lista"></section>
+
+        <!-- Contenedor para los productos más comprados -->
+        <section id="productos-mas-comprados">
+          <h2>Productos Más Comprados</h2>
+          <div id="productos-mas-comprados-lista"></div>
+        </section>
+        
+    <!-- Botón para deslizar hacia abajo -->
+    <button id="scroll-left-btn">Ver Más Productos</button>
+  </main>
+
+  <script src="/paginas/puntolan.js"></script>
 </body>
 </html>
