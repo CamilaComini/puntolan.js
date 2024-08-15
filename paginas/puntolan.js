@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Elementos del DOM
   const btnInicio = document.getElementById('btnInicio');
   const btnProductos = document.getElementById('btnProductos');
-  const btnContacto = document.getElementById('btnContacto');
   const listaCarrito = document.getElementById('listaCarrito');
   const totalCarrito = document.getElementById('totalCarrito');
   const contadorCarrito = document.getElementById('contador-carrito');

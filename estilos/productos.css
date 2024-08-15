@@ -10,7 +10,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; 
-  background-color: #000000; 
 }
 
 /* Estilo de la imagen de fondo */
@@ -52,6 +51,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
+/* Contenedor del logo y navegación */
 .header-content {
   display: flex;
   align-items: center;
@@ -60,6 +60,7 @@ header {
   margin: 0 auto; 
 }
 
+/* Estilo del logo */
 .logo {
   display: flex;
   align-items: center;
@@ -87,7 +88,7 @@ nav button {
   margin-left: 10px; 
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #d31212; 
+  background-color: #d31212e7; 
   color: #fff; 
   border: none;
   cursor: pointer;
@@ -96,8 +97,8 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #000000; 
-  color: #fff;
+  background-color: #ddd; 
+  color:rgba(0, 0, 0, 0.767);
 }
 
 /* Estilo del carrito */
@@ -138,11 +139,7 @@ main {
   padding: 20px;
   z-index: 1;
   position: relative; 
-  max-width: 1200px; 
-  margin: 30px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: #ffffff; 
+  color: #fff;
 }
 
 /* Estilo de los productos */

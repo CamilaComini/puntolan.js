@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Cargar todos los productos
+  // Cargar productos y actualizar el contador del carrito
   fetch('productos.json')
     .then(response => response.json())
     .then(productos => {
+      localStorage.setItem('productos', JSON.stringify(productos)); // Guardar productos en localStorage
       mostrarTodosLosProductos(productos);
       actualizarContadorCarrito();
     })
@@ -37,7 +38,7 @@ function agregarAlCarrito(productId) {
   const cantidadInput = document.getElementById(`cantidad-${producto.id}`);
   const cantidad = parseInt(cantidadInput.value);
 
-  if (cantidad <= producto.stock && cantidad > 0) {
+  if (producto && cantidad <= producto.stock && cantidad > 0) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const productoEnCarrito = carrito.find(p => p.id === productId);
 
@@ -52,6 +53,7 @@ function agregarAlCarrito(productId) {
     document.getElementById(`stock-${producto.id}`).textContent = `Stock disponible: ${producto.stock}`;
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('productos', JSON.stringify(productos)); // Actualizar el stock en localStorage
     actualizarContadorCarrito();
     alert(`${producto.nombre} agregado al carrito.`);
   } else {
@@ -66,56 +68,11 @@ function actualizarContadorCarrito() {
   contadorCarrito.textContent = totalProductos;
 }
 
-  // Event listeners para los botones
-  btnInicio.addEventListener('click', () => {
-    window.location.href = '/index.html'; 
-  });
+// Event listeners para los botones de navegación
+document.getElementById('btnInicio').addEventListener('click', () => {
+  window.location.href = '/index.html'; 
+});
 
-  btnProductos.addEventListener('click', () => {
-    window.location.href = '/productos.html';   
-  });
-
-  // Función para cargar productos desde el archivo JSON
-async function cargarProductos() {
-  try {
-      const response = await fetch('productos.json');
-      const productos = await response.json();
-
-      // Obtener el contenedor donde se mostrarán los productos
-      const contenedor = document.getElementById('productos');
-
-      // Limpiar el contenedor antes de agregar nuevos productos
-      contenedor.innerHTML = '';
-
-      // Crear elementos para cada producto y agregar al contenedor
-      productos.forEach(producto => {
-          // Crear un contenedor para el producto
-          const productoDiv = document.createElement('div');
-          productoDiv.className = 'producto';
-
-          // Crear y agregar la imagen
-          const img = document.createElement('img');
-          img.src = producto.imagen;
-          img.alt = producto.nombre;
-          img.width = 150; // Ajusta el tamaño si es necesario
-          productoDiv.appendChild(img);
-
-          // Crear y agregar el nombre y el precio del producto
-          const nombre = document.createElement('h3');
-          nombre.textContent = producto.nombre;
-          productoDiv.appendChild(nombre);
-
-          const precio = document.createElement('p');
-          precio.textContent = `$${producto.precio}`;
-          productoDiv.appendChild(precio);
-
-          // Añadir el producto al contenedor principal
-          contenedor.appendChild(productoDiv);
-      });
-  } catch (error) {
-      console.error('Error al cargar los productos:', error);
-  }
-}
-
-// Llamar a la función cuando la página esté lista
-document.addEventListener('DOMContentLoaded', cargarProductos);
+document.getElementById('btnProductos').addEventListener('click', () => {
+  window.location.href = '/productos.html';   
+});
