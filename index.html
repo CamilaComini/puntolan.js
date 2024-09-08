@@ -17,7 +17,7 @@
       </div>
       <nav>
         <button id="btnInicio">Inicio</button>
-        <button id="btnProductos">Productos</button>  
+        <button id="btnProductos">Productos</button>
       </nav>
       <div class="header-right">
         <a href="/listacarrito.html" id="carrito-link">
@@ -26,29 +26,29 @@
         </a>
       </div>
     </div>
- </header>
+  </header>
 
   <main>
-      <section class="video-preview-container">
-      <video id="background-video" autoplay loop> 
+    <section class="video-preview-container">
+      <video id="background-video" autoplay loop>
         <source src="/video/ellos.mp4" type="video/mp4">
         Tu navegador no soporta el formato de video.
       </video>
     </section>
 
-        <!-- Contenedor para productos destacados -->
-        <section id="productos-lista"></section>
-
-        <!-- Contenedor para los productos más comprados -->
-        <section id="productos-mas-comprados">
-          <h2>Productos Más Comprados</h2>
-          <div id="productos-mas-comprados-lista"></div>
-        </section>
-        
-    <!-- Botón para deslizar hacia abajo -->
+    <section id="productos-lista">
+      <h2>Productos Destacados</h2>
+      <div class="productos-contenedor">
+        <!-- Los productos destacados se agregarán aquí dinámicamente -->
+      </div>
+    </section>
+    
+    <!-- Botón para ver más productos -->
     <button id="scroll-left-btn">Ver Más Productos</button>
   </main>
 
   <script src="/paginas/puntolan.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/paginas/nav.js"></script>
 </body>
 </html>

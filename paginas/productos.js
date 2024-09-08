@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Cargar productos y actualizar el contador del carrito
+  cargarProductos();
+  actualizarContadorCarrito();
+});
+
+function cargarProductos() {
   fetch('productos.json')
     .then(response => response.json())
     .then(productos => {
       localStorage.setItem('productos', JSON.stringify(productos)); // Guardar productos en localStorage
       mostrarTodosLosProductos(productos);
-      actualizarContadorCarrito();
     })
     .catch(error => console.error('Error cargando los productos:', error));
-});
+}
 
 function mostrarTodosLosProductos(productos) {
   const productosContainer = document.getElementById('productos-container');
@@ -55,9 +58,19 @@ function agregarAlCarrito(productId) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     localStorage.setItem('productos', JSON.stringify(productos)); // Actualizar el stock en localStorage
     actualizarContadorCarrito();
-    alert(`${producto.nombre} agregado al carrito.`);
+    Swal.fire({
+      position: "relative",
+      icon: "success",
+      title: "Su producto se agrego al carrito",
+      showConfirmButton: false,
+      timer: 1500
+    });
   } else {
-    alert('Cantidad no válida o stock insuficiente.');
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "No quedaron mas productos en stock..",
+    });
   }
 }
 
@@ -67,12 +80,3 @@ function actualizarContadorCarrito() {
   const totalProductos = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
   contadorCarrito.textContent = totalProductos;
 }
-
-// Event listeners para los botones de navegación
-document.getElementById('btnInicio').addEventListener('click', () => {
-  window.location.href = '/index.html'; 
-});
-
-document.getElementById('btnProductos').addEventListener('click', () => {
-  window.location.href = '/productos.html';   
-});

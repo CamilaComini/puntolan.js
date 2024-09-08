@@ -12,12 +12,45 @@
     <h1>Tu Carrito de Compras</h1>
     <button id="btnInicio">Volver a la Tienda</button>
   </header>
+  
 
   <main>
     <ul id="listaCarrito"></ul>
     <p>Total: <span id="totalCarrito">$0.00</span></p>
+    <button id="btnFinalizarCompra">Finalizar La Compra</button>
+
+    <!-- Formulario de compra -->
+    <div id="formularioCompra" style="display: none;">
+      <h2>Formulario de Compra</h2>
+      <form id="formCompra">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="medioPago">Medio de Pago:</label>
+        <select id="medioPago" name="medioPago" required>
+          <option value="">Selecciona un medio de pago</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="transferencia">Transferencia</option>
+          <option value="tarjeta">Tarjeta</option>
+        </select><br>
+
+        <button type="submit">Todo Listo</button>
+        <button type="button" id="btnCancelar">Cancelar</button>
+      </form>
+      <p id="mensajeError" style="color: red; display: none;">Por favor, completa todos los campos.</p>
+    </div>
   </main>
 
   <script src="/paginas/listacarrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

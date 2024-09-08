@@ -156,7 +156,8 @@ main {
   border-radius: 8px;
   padding: 10px;
   text-align: center;
-  max-width: 200px;
+  max-width: 300px; /* Ancho ajustado */
+  width: 100%; /* Para asegurar que ocupe el 100% del espacio permitido */
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

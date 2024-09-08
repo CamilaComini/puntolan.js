@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const listaCarrito = document.getElementById('listaCarrito');
   const totalCarrito = document.getElementById('totalCarrito');
-
+  const btnFinalizarCompra = document.getElementById('btnFinalizarCompra');
+  const formularioCompra = document.getElementById('formularioCompra');
+  const formCompra = document.getElementById('formCompra');
+  const mensajeError = document.getElementById('mensajeError');
+  const btnCancelar = document.getElementById('btnCancelar');
+  
   // Recuperar el carrito del localStorage
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   
@@ -12,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   carrito.forEach((producto, index) => {
     const li = document.createElement('li');
-    li.classList.add('carrito-item'); // Añadir clase para estilos personalizados
+    li.classList.add('carrito-item'); 
 
     // Crear elementos para mostrar detalles del producto
     const nombre = document.createElement('span');
@@ -32,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         producto.cantidad -= 1;
         total -= producto.precio;
       } else {
-        carrito.splice(index, 1); // Eliminar el producto del array si la cantidad es 1 o menos
-        li.remove(); // Eliminar el elemento del DOM
+        carrito.splice(index, 1); 
+        li.remove(); 
         total -= producto.precio;
       }
 
@@ -66,19 +71,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mostrar el total del carrito
   totalCarrito.textContent = `$${total.toFixed(2)}`;
 
-  // Actualizar el contador del carrito en la página principal
-  const contadorCarrito = document.getElementById('contador-carrito');
-  if (contadorCarrito) {
-    const totalCantidad = carrito.reduce((acc, prod) => acc + (prod.cantidad || 1), 0);
-    contadorCarrito.textContent = totalCantidad;
-  }
-});
+  // Mostrar el formulario cuando se hace clic en "Finalizar La Compra"
+  btnFinalizarCompra.addEventListener('click', () => {
+    formularioCompra.style.display = 'block';
+  });
 
-// Event listeners para los botones
-btnInicio.addEventListener('click', () => {
+  // Cancelar el formulario
+  btnCancelar.addEventListener('click', () => {
+    formularioCompra.style.display = 'none';
+  });
+
+  // Enviar el formulario
+  formCompra.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const telefono = document.getElementById('telefono').value;
+    const email = document.getElementById('email').value;
+    const medioPago = document.getElementById('medioPago').value;
+
+    if (!nombre || !apellido || !telefono || !email || !medioPago) {
+      mensajeError.style.display = 'block';
+    } else {
+      mensajeError.style.display = 'none';
+      Swal.fire({
+        title: "Muchas Gracias Por Su Compra",
+        text: "En breve le llegara el pedido..",
+        imageUrl: "/logo/perro.png",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "imagen de agrado"
+      });
+      formularioCompra.style.display = 'none';
+      localStorage.removeItem('carrito'); 
+      listaCarrito.innerHTML = '';
+      totalCarrito.textContent = '$0.00';
+    }
+  });
+});
+//Boton para volver a la tienda
+document.getElementById('btnInicio').addEventListener('click', () => {
   window.location.href = '/index.html'; 
-});
-
-btnProductos.addEventListener('click', () => {
-  window.location.href = '/productos.html';   
 });

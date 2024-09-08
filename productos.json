@@ -1,34 +1,168 @@
 [
   {
     "id": 1,
-    "nombre": "Auricular Inalambrico Xiaomi Redmi Buds 3",
-    "precio": 20000,
-    "imagen":  "fotos/auriculares bt buds lite.png",
+    "nombre": "Velador Astronauta",
+    "precio": 16000,
+    "imagen":  "fotos/1.png",
     "stock": 4,
-    "descripcion": "Auriculares inalámbricos de alta calidad."
-  },
+    "descripcion": "Ideal para cualquier habitación del hogar. Su diseño portátil permite transportarlo a donde lo necesites. Su diseño es creativo y llamativo para los niños. Un velador ideal para la casa. El velador LED se puede ajustar a su elección, y la luz uniforme es útil para una fácil lectura.",
+    "destacado": true
+},
   {
     "id": 2,
-    "nombre": "Auricular Inalambrico E7s",
-    "precio": 50,
-    "imagen": "fotos/auriculares bt e7s (1).png",
+    "nombre": "Auricular Inalambrico YD05",
+    "precio": 20000,
+    "imagen": "fotos/2.png",
     "stock": 30,
-    "descripcion": "Auriculares inalámbricos de alta calidad."
+    "descripcion": "Los Auriculares Bluetooth YD05 HiFi Sound son la elección perfecta para los amantes de los video juegos y la música. Con un diseño inalámbrico y formato in-ear, te brindarán la comodidad que necesitas durante horas de uso. Además, su tecnología Bluetooth V5.3 garantiza una conexión estable y de alta calidad de sonido.",
+    "destacado": true
   },
   {
     "id": 3,
-    "nombre": "Teclado",
-    "precio": 100,  
-    "imagen": "jpg",
+    "nombre": "Proyector Galaxia Hexagono",
+    "precio": 60000,  
+    "imagen": "fotos/3.png",
     "stock": 20,
-    "descripcion": "Teclado mecánico con retroiluminación."
+    "descripcion": "¡La diversión no termina! La lámpara hexagonal ofrece una selección de efectos cósmicos para una inmersión total. Viaja a un mundo nuevo dentro de tu propia habitación. Una noche de sueño más reparador con este proyector de estrellas y galaxias. Incluye parlante para que puedas crear la experiencia unica."
   },
   {
     "id": 4,
-    "nombre": "Monitor",
-    "precio": 300,
-    "imagen": "jpg",
+    "nombre": "Auricular Inalambrico E7s",
+    "precio": 16000,
+    "imagen": "fotos/auriculares bt e7s (1).png",
     "stock": 15,
-    "descripcion": "Monitor de alta resolución para gaming."
+    "descripcion": "El formato perfecto para vos. Al ser in-ear, mejoran la calidad del audio y son de tamaño pequeño para poder insertarse en tu oreja. Son ideales para acompañarte a la hora de hacer ejercicio mientras te sumergís en el mejor sonido envolvente."
+  },
+  {
+    "id": 5,
+    "nombre": "Auricular Inalambrico Haylou G3",
+    "precio": 60000,
+    "imagen": "fotos/auriculares bt haylou g3.png",
+    "stock": 1,
+    "descripcion": "Auriculares inalámbricos de alta calidad."
+  },
+  {
+    "id": 6,
+    "nombre": "Auricular Inalambrico M10",
+    "precio": 17000,  
+    "imagen": "fotos/auriculares bt m10.png",
+    "stock": 27,
+    "descripcion": "¡Experimenta la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Genérica Inalámbrico no te pierdes ningún detalle y escuchas el audio tal y como fue diseñado por los creadores.",
+    "destacado": true
+  },
+  {
+    "id": 7,
+    "nombre": "Auricular Inalambrico Qcy",
+    "precio": 37000,
+    "imagen": "fotos/auriculares bt qcy.png",
+    "stock": 2,
+    "descripcion": "Los Auriculares bluetooth QCY T1 son los auriculares bluetooth más pequeños del mercado y sin ningún cable. Están equipados con la última tecnología como Bluetooth 5.0 y cancelación de ruido DSP, lo que garantiza una calidad de sonido superior. Su estructura ergonómica y resistencia a las salpicaduras del agua permiten su uso durante el entrenamiento. Con un alcance de 10 metros y una autonomía de 20 horas, podrás disfrutar de tu música en cualquier momento y lugar. A pesar de su tamaño compacto, incluyen un micrófono para atender llamadas sin necesidad de usar el teléfono."
+  },
+  {
+    "id": 8,
+    "nombre": "Auricular Inalambrico Redmi Essential",
+    "precio": 40000,
+    "imagen": "fotos/auriculares bt redmi essential.png",
+    "stock": 43,
+    "descripcion": "Los auriculares Xiaomi Redmi Buds Essential ofrecen un sonido con calidad HD. Estos están conformados por un controlador dinámico de 7.2mm y un diseño que se ajusta perfectamente al oído para reducir los ruidos de forma pasiva y evitar la distorsión."
+  },
+  {
+    "id": 9,
+    "nombre": "Chromecast Google Tv HD",
+    "precio": 96000,  
+    "imagen": "fotos/google ch (1).png",
+    "stock": 18,
+    "descripcion": "Disfruta de contenido Full HD 1080p HDR desde tus aplicaciones y dispositivos móviles favoritos con el Snow Google Chromecast con Google TV (HD). Se conecta al puerto HDMI de su pantalla y se conecta a su red Wi-Fi para brindar acceso a una variedad de aplicaciones a través del sistema operativo Android TV incorporado. Es compatible con la resolución Full HD 1080p (1920 x 1080) y los formatos HDR10, HDR10+ y Dolby Vision HDR para brindar una imagen vibrante y detallada en pantallas compatibles. El Asistente de Google está integrado para proporcionar una búsqueda de voz simple con el control remoto de voz incluido."
+  },
+  {
+    "id": 10,
+    "nombre": "Mini Impresora Portatil",
+    "precio": 39000,
+    "imagen": "fotos/HB (4).png",
+    "stock": 7,
+    "descripcion": "Esta Impresora permite imprimir fotos, etiquetas, mensajes, listas, registros, código QR e impresión web. La aplicación WalkPrint ofrece fuentes y temas para personalizar las impresiones.",
+    "destacado": true
+  },
+  {
+    "id": 11,
+    "nombre": "Tripode RGB",
+    "precio": 48000,
+    "imagen": "fotos/HB (6).png",
+    "stock": 37,
+    "descripcion": "Este producto es un Aro de Luz Led de 36cm, de la marca OEM, con un soporte especial para celular y un trípode de 2.10 metros de altura. Este aro de luz cuenta con la característica de tener luces RGB, lo que significa que puede cambiar a cualquier color que desee, proporcionando una iluminación versátil para cualquier situación. Además, tiene tres tonos de blanco diferentes: frío, cálido y neutro, lo que le permite ajustar la iluminación a su gusto y necesidad. El modelo MJ36 no es recargable, pero viene con un cable USB de 1,80m de longitud para su alimentación, lo que le brinda la flexibilidad de usarlo en cualquier lugar con una fuente de alimentación USB. El conector de salida es USB y el tipo de alimentación es de 5V, lo que garantiza una iluminación constante y de alta calidad."
+  },
+  {
+    "id": 12,
+    "nombre": "Calculadora De Escritorio",
+    "precio": 10000,  
+    "imagen": "fotos/HB (7).png",
+    "stock": 13,
+    "descripcion": "La mejor calculadora para tu escritorio en lindos colores pasteles, durabilidad y estetica."
+  },
+  {
+    "id": 13,
+    "nombre": "Joystick Marvo Gt-80 Pro Ps4 Wireless",
+    "precio": 50000,
+    "imagen": "fotos/joystick marvo.png",
+    "stock": 23,
+    "descripcion": "Este mando combina funciones revolucionarias mientras conserva precisión, comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, podés pasar horas jugando con total confort.",
+    "destacado": true
+  },
+  {
+    "id": 14,
+    "nombre": "Kit Tira Led",
+    "precio": 18000,
+    "imagen": "fotos/kit tira led.png", 
+    "stock": 6,
+    "descripcion": "¡Sumate a la movida EcoFriendly! La tecnología led es una excelente aliada para disminuir el consumo energético. Se trata de una iluminación que abre múltiples posibilidades para la decoración de cada rincón de tu casa ya que, gracias a su flexibilidad, tendrás la posibilidad de adaptarlas a distintos relieves y a espacios reducidos como esquinas y zócalos."
+  },
+  {
+    "id": 15,
+    "nombre": "Linterna Tactica Recargable",
+    "precio": 4000,  
+    "imagen": "fotos/linterna tactica.png",
+    "stock": 107,
+    "descripcion": "Disfrutá de contar con la linterna ideal para todas tus necesidades. Fabricada con materiales resistentes y de calidad se adaptará a todas las situaciones en las que necesites contar con buena iluminación."
+  },
+  {
+    "id": 16,
+    "nombre": "Mercado Pago Mini Point",
+    "precio": 3000,  
+    "imagen": "fotos/mercado pago.png",
+    "stock": 9,
+    "descripcion": "Adquiri de forma oficial el nuevo modelo de Mercado Pago Point Mini NFC recien ingresado con mejor alcance y rapidéz. Usá las herramientas de cobro de Mercado Pago con POINT en tu negocio y no pierdas ni una venta."
+  },
+  {
+    "id": 17,
+    "nombre": "Micro Sd 64Gb",
+    "precio": 18000,
+    "imagen": "fotos/microsd.png",
+    "stock": 97,
+    "descripcion": "SanDisk es sinónimo de rendimiento, calidad y confiabilidad. No solo te permitirá fotografiar momentos, sino que además serás capaz de almacenar y compartir cada experiencia, donde sea que te encuentre la inspiración. Con SanDisk podrás capturar, preservar, acceder y transformar diversidad de datos."
+  },
+  {
+    "id": 18,
+    "nombre": "Pendrive 32Gb",
+    "precio": 13000,
+    "imagen": "fotos/pndrive.png",
+    "stock": 46,
+    "descripcion": "Cuenta con un diseño super compacto, delgado y resistente para que puedas llevarlo adonde vayas. ¡Podrás usarlo y transportarlo con facilidad cuando te muevas de un lado al otro!",
+    "destacado": true
+  },
+  {
+    "id": 19,
+    "nombre": "Tripode De Celular",
+    "precio": 5000,  
+    "imagen": "fotos/tripode de celular.png",
+    "stock": 12,
+    "descripcion": "Un tripode para poder hacer todo con comodidad."
+  },
+  {
+    "id": 20,
+    "nombre": "Auriculares Bluetooth Unicornio",
+    "precio": 28000,  
+    "imagen": "fotos/unico.png",
+    "stock": 29,
+    "descripcion": "En la calle, en el colectivo o en la oficina, ten siempre a mano tus audífonos y ¡escápate de la rutina por un rato! Vas a poder disfrutar de la música que más te gusta y de tus podcasts favoritos cuando quieras y donde quieras."
   }
 ]
